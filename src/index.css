@@ -1,73 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import-normalize;
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* ========== HomePage Nav ========== */
+.content h1 {
+  color: white;
+  font-size: 5rem;
 }
 
-body {
+.content a {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.content a:hover {
+  color: tomato;
+}
+
+.homePageNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5vh;
+}
+
+.homePageNav ul li a {
+  text-decoration: none;
+  font-size: 5rem;
+  color: white;
+}
+
+.homePageNav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+
+  min-height: 30vh;
+  min-width: 20vw;
+  margin: 20px;
+
+  list-style-type: none;
+  padding: 5rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease-in-out 0.2s;
+}
+
+.homePageNav ul li:nth-child(1) {
   background: #bdc3c7;
   background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
   background: linear-gradient(to right, #2c3e50, #bdc3c7);
-  color: white;
-  font-family: "Roboto", sans-serif;
+}
+
+.homePageNav ul li:nth-child(2) {
+  background: #636363;
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);
+  background: linear-gradient(to right, #a2ab58, #636363);
+}
+
+.homePageNav ul li:nth-child(3) {
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);
+}
+
+.homePageNav ul li:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+/* ================================== */
+
+/* ========= Component Navs ========= */
+.app-container {
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
 }
 
-h1 {
-  margin: 2rem;
+.sidenav {
+  margin: 0em 2em;
+  flex-basis: 15%;
+  height: 90vh;
+  padding: 2em;
+  border-radius: 15px;
 }
 
-.board {
-  border: 1rem solid #194877;
-  background: #194877;
-  width: 500px;
-  height: 500px;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 1rem;
+.sidenav ul {
+  list-style-type: none;
 }
 
-.squares {
-  background: #758799;
-  border: none;
-  font-size: 5rem;
-  /* font-weight: 800; */
-  cursor: pointer;
-  outline: none;
-}
-
-.X {
-  color: red;
-}
-.O {
-  color: green;
-}
-
-.info-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-h3 {
+.sidenav li {
   padding: 1rem;
+  font-size: 1.5em;
 }
 
-li {
-  list-style: none;
-}
-
-.info-wrapper button {
-  background: #272727;
+.sidenav a {
+  text-decoration: none;
   color: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  margin: 0.5rem 1rem;
 }
+
+.sidenav a:hover {
+  color: pink;
+}
+
+.sidenav .sidenav ul li {
+  text-decoration: none;
+}
+
+.content {
+  flex-basis: 85%;
+  text-align: center;
+  min-height: 90vh;
+  background: #373b44;
+  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
+  background: linear-gradient(to right, #4286f4, #373b44);
+
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.activeLink {
+  font-size: 2rem;
+  color: tomato !important;
+}
+
+.CMNav {
+  background: #bdc3c7;
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+}
+
+.CPNav {
+  background: #636363;
+  background: -webkit-linear-gradient(to bottom, #a2ab58, #636363);
+  background: linear-gradient(to bottom, #a2ab58, #636363);
+}
+
+.HWNav {
+  background: #f12711;
+  background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);
+  background: linear-gradient(to bottom, #f5af19, #f12711);
+}
+/* ================================== */

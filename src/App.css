@@ -1,0 +1,59 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.game {
+  font-size: 14px;
+  margin: 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game ol,
+.game ul {
+  padding-left: 30px;
+}
+
+.board {
+  border: 1rem solid #194877;
+  background: #194877;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.status {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.restart {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+}
+
+.square {
+  background: #758799;
+  border: none;
+  font-size: 5rem;
+  /* font-weight: 800; */
+  cursor: pointer;
+  outline: none;
+}
+
+.square:focus {
+  outline: none;
+  background: #ddd;
+}
+
+.game-info {
+  margin-left: 20px;
+  min-width: 190px;
+}
