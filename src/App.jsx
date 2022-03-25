@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 
 function App() {
   const [squares, setSquares] = React.useState(Array(9).fill(null))

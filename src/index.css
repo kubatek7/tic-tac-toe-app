@@ -1,7 +1,80 @@
 @import-normalize;
 
+.content {
+  flex-basis: 85%;
+  text-align: center;
+  min-height: 90vh;
+  background: #373b44;
+  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
+  background: linear-gradient(to right, #4286f4, #373b44);
+
+  padding: 2em;
+  border-radius: 15px;
+}
+/* ====Board Styling===== */
+
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+.game {
+  font-size: 14px;
+  margin: 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game ol,
+.game ul {
+  padding-left: 30px;
+}
+
+.board {
+  border: 1rem solid #194877;
+  background: #194877;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.status {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.restart {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  padding: 8px 15px;
+}
+
+.square {
+  background: #758799;
+  border: none;
+  font-size: 5rem;
+  /* font-weight: 800; */
+  cursor: pointer;
+  outline: none;
+}
+
+.square:focus {
+  outline: none;
+  background: #ddd;
+}
+
+.game-info {
+  margin-left: 20px;
+  min-width: 190px;
+}
+
 /* ========== HomePage Nav ========== */
-.content h1 {
+/* .content h1 {
   color: white;
   font-size: 5rem;
 }
@@ -73,7 +146,7 @@
 /* ================================== */
 
 /* ========= Component Navs ========= */
-.app-container {
+/* .app-container {
   display: flex;
 }
 
@@ -105,21 +178,9 @@
 
 .sidenav .sidenav ul li {
   text-decoration: none;
-}
+} */
 
-.content {
-  flex-basis: 85%;
-  text-align: center;
-  min-height: 90vh;
-  background: #373b44;
-  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
-  background: linear-gradient(to right, #4286f4, #373b44);
-
-  padding: 2em;
-  border-radius: 15px;
-}
-
-.activeLink {
+/* .activeLink {
   font-size: 2rem;
   color: tomato !important;
 }
@@ -140,5 +201,5 @@
   background: #f12711;
   background: -webkit-linear-gradient(to bottom, #f5af19, #f12711);
   background: linear-gradient(to bottom, #f5af19, #f12711);
-}
+} */
 /* ================================== */
