@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 function App() {
   const [squares, setSquares] = React.useState(Array(9).fill(null))
 
+const [player1, setPlayer1 ] = useState(1)
+const [player2, setPlayer2 ] = useState(0)
+
   const nextValue = calculateNextValue(squares)
   const winner = calculateWinner(squares)
   const status = calculateStatus(winner, squares, nextValue)
+
+  const updatePlayers = (player) => {
+    if (player === "0") {
+      setPlayer1(player1 + 1)
+    }
+    else {
+      setPlayer2(player2 + 1)
+    }
+  }
 
   function selectSquare(square) {
     if (winner || squares[square]) {
@@ -46,6 +58,10 @@ function App() {
       <button className="restart" onClick={restart}>
         Play Again
       </button>
+      <div>
+        <p>{player1}</p>
+        <p>{player2}</p>
+        </div>
     </div>
   )
 }
@@ -94,10 +110,8 @@ function calculateWinner(squares) {
 }
 
 function AppGame() {
-  // const history = useHistory();
   return (
     <div className="content">
-{/* <button onClick={() => history.goBack()}>Go Back</button> */}
     <Game />
         </div>
      );
